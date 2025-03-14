@@ -262,13 +262,13 @@ section {
   text-align: center;
 }
 #presentazione h1 {
-  display: none;
+  display: block;
   /* animation: animationOpacity 15s linear forwards; */
   margin: 100px 0;
 }
 #presentazione p {
   position: relative;
-  display: none;
+  display: block;
   /*  animation: animationOpacity 10s ease-in forwards; */
   margin: 20px 0;
   width: 80%;
