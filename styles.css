@@ -237,6 +237,93 @@ section {
   border-bottom: 1px solid rgba(255, 255, 255, 0.108);
   background-color: rgba(0, 0, 0, 0.2);
 }
+/* SECTION1 */
+#welcome {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  /* animation: 10s byebye ease-out forwards; */
+}
+
+#presentazione {
+  border-radius: 150px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  color: white;
+  align-items: center;
+  justify-content: start;
+  font-size: 22px;
+  text-shadow: 2px 2px 15px white;
+  text-align: center;
+}
+#presentazione h1 {
+  display: none;
+  /* animation: animationOpacity 15s linear forwards; */
+  margin: 100px 0;
+}
+#presentazione p {
+  position: relative;
+  display: none;
+  /*  animation: animationOpacity 10s ease-in forwards; */
+  margin: 20px 0;
+  width: 80%;
+}
+/* SECTION4 */
+#bio {
+  display: flex;
+  flex-direction: column;
+
+  align-items: normal;
+  justify-content: left;
+
+  background-color: rgba(64, 164, 236, 0);
+  padding-top: 200px;
+  text-align: left;
+}
+#bio h2 {
+  text-align: left;
+  font-family: Cinzel Decorative;
+}
+
+#bio p {
+  margin-left: 22px;
+  width: 90%;
+
+  font-family: Work sans;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  line-height: 1.2em;
+}
+#estrattoLibro {
+  display: none;
+  flex-direction: column;
+  max-width: 720px;
+  max-height: 400px;
+  overflow: auto;
+  margin: 50px 5px;
+  padding: 0 50px;
+  color: #a8a8a8;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.411);
+  border-radius: 40px;
+}
+#estrattoLibro p {
+  line-height: 1.65em;
+  font-family: Work sans;
+  font-size: 16px;
+
+  margin-top: 18px;
+  text-align: justify;
+}
+#estrattoLibro h2 {
+  margin-top: 25px;
+}
 /* FOOTER */
 #footer {
   display: flex;
