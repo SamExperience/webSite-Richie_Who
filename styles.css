@@ -1,0 +1,213 @@
+/* FONTS: dongle , eagle lake , Dancing Script , Great Vibes , Italianno ,
+The Nautigal , lora , Merriweather , mulish , Playfair Display , Poppins
+Work sans, ZCOOL XiaoWei
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dongle&family=Eagle+Lake&family=Great+Vibes&family=Italianno&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=The+Nautigal:wght@400;700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=ZCOOL+XiaoWei&display=swap");
+/* FONT FIRMA AUTORE */
+/* font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal; */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+
+/* SET PAGE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  color: #a8a8a8;
+  background-color: black;
+}
+body h2,
+h3 {
+  color: #ffb300a5;
+}
+.background {
+  position: fixed;
+  background-image: url("img/background1.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  animation: animationBrightness 60s infinite ease-in-out;
+  width: 100%;
+  min-height: 100vh;
+}
+/* HEADER */
+#goBack {
+  position: fixed;
+  top: 120px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+}
+#goBack svg {
+  height: 32px;
+  width: 32px;
+}
+#goBack a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #a8a8a8;
+  font-size: 16px;
+}
+#goBack a:hover {
+  color: white;
+}
+
+#goAnteprimaLibro {
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+#header {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  top: 0;
+  left: 0;
+
+  min-height: 100px;
+  width: 100%;
+
+  height: auto;
+  overflow: visible;
+  align-items: center;
+
+  padding: 5px 10px;
+  /*  gap: 10px; */
+  background-color: rgb(0, 0, 0);
+  z-index: 10000;
+}
+
+#header::before {
+  filter: brightness(100%) contrast(80%);
+  transition: 5s ease;
+}
+
+#contLogo {
+  display: flex;
+  height: 100px;
+  min-width: 200px;
+  max-width: 200px;
+  flex: 1;
+  justify-content: left;
+  align-items: center;
+  margin-right: 10px;
+  animation: animationOpacity 3s ease forwards;
+}
+#cLogo {
+  flex: 1;
+}
+#cLinea {
+  width: 1px;
+  height: 80%;
+  border: 1px solid rgb(168, 168, 168);
+}
+
+#cNome {
+  flex: 1;
+
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+
+  line-height: 1;
+  margin-left: 10px;
+}
+#contMenuDX {
+  position: relative;
+  height: 100px;
+  flex: 1;
+}
+#slideMenu {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+  min-width: 80px;
+  padding: 15px;
+  top: 110px;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+}
+#slideMenu div {
+  text-align: right;
+  padding: 10px;
+
+  font-size: 16px;
+  font-family: "Eagle Lake", serif;
+}
+#slideMenu div a:hover {
+  color: white;
+}
+#contIconMenu {
+  display: none;
+}
+#logo {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+  filter: invert(60%);
+}
+#contMenuNav {
+  height: auto;
+  flex: 4;
+}
+#navMenu {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+#navMenu div a {
+  font-size: 16px;
+  font-family: "Eagle Lake", serif;
+  text-decoration: none;
+  animation: animationOpacity 10s ease forwards;
+}
+#navMenu div a::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(img/svg/selectedLink.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+}
+#navMenu div a:hover::before,
+#navMenu div a:focus::before {
+  opacity: 1;
+}
+#navMenu div a:link {
+}
+#navMenu div a:visited {
+}
+#navMenu div a:hover {
+  color: rgb(255, 255, 255);
+}
+#navMenu a.active::before {
+}
+
+#navMenu div a:hover {
+}
