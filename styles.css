@@ -211,3 +211,29 @@ h3 {
 
 #navMenu div a:hover {
 }
+/* MAIN */
+#mainCont {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  min-height: 100vh;
+
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 500;
+  color: white;
+}
+section {
+  display: flex;
+  width: 85%;
+  min-height: 100vh;
+
+  height: auto;
+  z-index: 800;
+  overflow: hidden;
+  font-family: Cinzel Decorative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.108);
+  background-color: rgba(0, 0, 0, 0.2);
+}
