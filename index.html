@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title></title>
+    <style>
+      /* SET STRUCTURE */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      #container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      #header,
+      #footer {
+        width: 100%;
+        display: flex;
+        background-color: #a8a8a8;
+      }
+      #header {
+        min-height: 80px;
+      }
+      #main {
+        display: flex;
+        width: 100%;
+        min-height: 80vh;
+      }
+      #footer {
+        min-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">HEADER</div>
+      <div id="main">MAIN</div>
+      <div id="footer">FOOTER</div>
+    </div>
+    <script>
+      $(document).ready(() => {});
+    </script>
+  </body>
+</html>
