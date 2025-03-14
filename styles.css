@@ -273,6 +273,47 @@ section {
   margin: 20px 0;
   width: 80%;
 }
+#evidenza {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  padding-top: 110px;
+  gap: 5px;
+}
+#imgArticoloEvidenza {
+  flex: 1;
+  overflow: hidden;
+  height: auto;
+}
+#imgArticoloEvidenza img {
+  position: relative;
+  width: 80%;
+  min-height: 600px;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-5deg);
+}
+#descrizioneArticoloEvidenza {
+  flex: 1;
+  padding: 20px;
+  height: 80%;
+  text-align: center;
+  color: #a8a8a8;
+}
+#descrizioneArticoloEvidenza h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+#descrizioneArticoloEvidenza p {
+  display: inline-block;
+  position: relative;
+  width: 80%;
+  line-height: 1.65em;
+  font-family: Work sans;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
 /* SECTION4 */
 #bio {
   display: flex;
