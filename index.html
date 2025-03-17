@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title></title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="media.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="manifest" href="site.webmanifest" />
+    <title>Richie who</title>
   </head>
   <body>
     <div class="background"></div>
 
-    <div id="container">
+    <!-- MAIN -->
+    <div id="mainCont">
       <!-- HEADER -->
       <div id="header">
         <div id="contLogo">
@@ -52,7 +62,7 @@
           <div><a href="#bio">Bio</a></div>
         </div>
       </div>
-      <!-- SECTION 1 -->
+      <!-- contenuti -->
       <section id="welcome" class="section">
         <div id="presentazione">
           <h1>Benvenuti su Richie Who</h1>
@@ -63,8 +73,8 @@
           <p>Preparati a lasciarti catturare… e a non voler più uscire.</p>
         </div>
       </section>
-       <!-- SECTION2 -->
-       <section id="evidenza" class="section">
+      <!-- SECTION2 -->
+      <section id="evidenza" class="section">
         <div id="imgArticoloEvidenza" class="product">
           <img
             src="img/libri/echo dei desideri/copertinaFronte2.png"
@@ -94,8 +104,8 @@
           <p><a href="novita.html">Scopri di piu ...</a></p>
         </div>
       </section>
-       <!-- SECTION3 -->
-       <section id="gallery" class="section">
+      <!-- SECTION3 -->
+      <section id="gallery" class="section">
         <div id="contImg">
           <div class="elemLibro">
             <img
@@ -435,8 +445,70 @@
           © 2025 Nome Azienda. Tutti i diritti riservati.
         </div>
       </div>
+    </div>
     <script>
-      $(document).ready(() => {});
+      $(document).ready(function () {
+        $("#contIconMenu").click(function (event) {
+          event.stopPropagation(); // Impedisce che il click si propaghi al document
+          $("#slideMenu").fadeToggle(100);
+        });
+
+        // Chiude il menu quando si clicca fuori
+        $(document).click(function (event) {
+          if (!$(event.target).closest("#contIconMenu, #slideMenu").length) {
+            $("#slideMenu").hide(50);
+          }
+        });
+
+        // Permette di cliccare dentro il menu senza chiuderlo
+        $("#slideMenu").click(function (event) {
+          event.stopPropagation();
+        });
+        $("#presentazione h1").fadeIn(10000);
+        $("#presentazione p").fadeIn(15000);
+
+        function checkVisibility() {
+          $(".product").each(function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            if (elementBottom > viewportTop && elementTop < viewportBottom) {
+              $(this).addClass("visible");
+            }
+          });
+        }
+
+        // Controllo iniziale
+        checkVisibility();
+
+        // Controllo allo scroll
+        $(window).on("scroll", function () {
+          checkVisibility();
+        });
+
+        function checkVisibilitygost() {
+          $(".section").each(function () {
+            var sectionTop = $(this).offset().top;
+            var sectionBottom = sectionTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+
+            if (sectionBottom > viewportTop && sectionTop < viewportBottom) {
+              $(this).addClass("visible"); // Aggiungi la classe per farla apparire
+            }
+          });
+        }
+
+        // Chiamata iniziale
+        checkVisibilitygost();
+
+        // Esegui il controllo quando si fa scroll
+        $(window).on("scroll", function () {
+          checkVisibilitygost();
+        });
+      });
     </script>
   </body>
 </html>
