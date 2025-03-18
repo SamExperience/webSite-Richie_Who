@@ -1,4 +1,4 @@
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   /* HEADER */
   #goBack {
     z-index: 99999999;
@@ -7,9 +7,7 @@
     height: 32px;
     width: 32px;
   }
-  #goBack p {
-    display: none;
-  }
+
   #contMenuNav {
     display: none;
   }
@@ -34,6 +32,13 @@
     animation: animationOpacity 3s ease forwards;
   }
   /* CONTENT */
+  #presentazione p {
+    margin: 20px 0;
+    width: 90%;
+  }
+  #presentazione h1 {
+    margin: 100px 0 50px 0;
+  }
   #evidenza {
     display: flex;
     flex-direction: column;
@@ -77,15 +82,35 @@
   }
   #imgArticoloEvidenza img {
     width: 80%;
-    min-height: 100%;
+    min-height: 450px;
     height: 100%;
     object-fit: cover;
-    transform: rotateZ(0deg);
+    transform: rotateZ(-5deg);
+  }
+  #estrattoLibro {
+    width: 80%;
+    margin: 50px 5px;
+    padding: 0 10px;
+  }
+  #estrattoLibro p {
+    line-height: 1.45em;
+    font-family: Work sans;
+    font-size: 16px;
+
+    margin-top: 18px;
+    text-align: justify;
+  }
+  #estrattoLibro h2 {
+    margin-top: 25px;
+  }
+  #goBack {
+    left: 0px;
+    z-index: 999999;
   }
   #contAmazon {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 85%;
     max-width: 700px;
     min-height: 200px;
@@ -94,7 +119,10 @@
     background-color: black;
     border-radius: 30px 0 30px 0;
   }
-
+  #contAmazon img {
+    position: relative;
+    margin: auto;
+  }
   .book-image {
     width: 55%;
     min-width: 200px;
@@ -141,8 +169,38 @@
     border-radius: 5px;
   }
 }
-@media (min-width: 768px) and (max-width: 991.98px) {
-  /* Stili per tablet e piccoli laptop */
+@media (min-width: 577px) and (max-width: 991.98px) {
+  section {
+    width: 100%;
+  }
+  #imgArticoloEvidenza img {
+    width: 100%;
+    min-height: 450px;
+    height: 100%;
+    object-fit: cover;
+    transform: rotateZ(-5deg);
+  }
+  #goBack {
+    left: 0px;
+    z-index: 999999;
+  }
+
+  #estrattoLibro {
+    width: 80%;
+    margin: 50px 5px;
+    padding: 0 10px;
+  }
+  #estrattoLibro p {
+    line-height: 1.45em;
+    font-family: Work sans;
+    font-size: 16px;
+
+    margin-top: 18px;
+    text-align: justify;
+  }
+  #estrattoLibro h2 {
+    margin-top: 25px;
+  }
 }
 @media (min-width: 1200px) {
   /* Stili per schermi grandi */
