@@ -32,12 +32,13 @@ h3 {
 }
 .background {
   position: fixed;
-  background-image: url("img/background1.webp");
+  background-image: url("../background1.webp");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
 
   animation: animationBrightness 60s infinite ease-in-out;
+
   width: 100%;
   min-height: 100vh;
 }
